@@ -1,0 +1,95 @@
+$primary-color: #3f51b5; // Indigo color for the tab line
+$background-color: #333333; // Dark background color
+$text-color: #ffffff; // White text color
+
+.center-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color; // Set the dark background color for the entire component
+  color: $text-color; // Set the text color
+  overflow: hidden; // Ensure that any animated elements don't overflow
+
+  .mat-tab-group {
+    width: 400px; // Adjust the width as needed
+    background-color: #1a1a1a; // Darker background color for the tabs
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); // Add a subtle box shadow for depth
+
+    .mat-tab-header {
+      background-color: $primary-color; // Set the indigo color for the tab line
+
+      .mat-ink-bar {
+        background-color: $primary-color; // Set the indigo color for the ink bar (the line under the active tab)
+      }
+    }
+
+    .loginformdiv,
+    .dummy {
+      padding: 20px;
+
+      .form-field {
+        width: 100%;
+        margin-bottom: 16px;
+
+        input {
+          width: 100%;
+          color: $text-color; // Set the input text color
+        }
+      }
+
+      button {
+        margin-top: 16px;
+        background-color: $primary-color; // Use the primary color for the button background
+        color: $text-color; // White text color for the button
+      }
+
+      .msg {
+        color: #ff0000;
+        margin-bottom: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Animation for subtle color change
+  @keyframes colorChange {
+    0% {
+      background-color: rgb(68, 66, 66);
+    }
+    50% {
+      background-color: #1a1a1a;
+    }
+    100% {
+      background-color: $background-color;
+    }
+  }
+
+  // Apply the animation to the center-wrap class
+  animation: colorChange 10s infinite;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button[disabled]:hover{
+  animation: shake 0.5s ease ;
+}
+.blurred-background {
+  filter: blur(5px); /* Adjust the blur effect as needed */
+  pointer-events: none; /* Allow interaction with elements behind the blurred background */
+}

@@ -1,0 +1,65 @@
+ckeditor {
+  margin: 20px;
+  width: 80%;
+  min-height: 700px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto;
+  color: black;
+  background-color: white;
+}
+.editorbox {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // max-width: 600px;
+
+}
+.container{
+  height: 100vh;
+  background-color:#333;
+}
+
+.top-nav {
+  background-color:rgb(30, 28, 28);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav button {
+  background-color: #23dcbb;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1ea991;
+}
+
+
+
+.profile-image .initials {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  &-icon {
+    height: 18px;
+    font-size: 16px;
+  }
+}

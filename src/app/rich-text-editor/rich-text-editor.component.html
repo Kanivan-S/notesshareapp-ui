@@ -1,0 +1,9 @@
+<form [formGroup]="editorForm" (ngSubmit)="submitForm()">
+  <ckeditor
+    formControlName= "editorData"
+    [editor]= "Editor"
+
+     >
+  </ckeditor>
+  <button type="submit">Share</button>
+</form>

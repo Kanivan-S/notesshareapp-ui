@@ -1,0 +1,10 @@
+<mat-nav-list>
+  <div>
+    <h2 style="text-align: center;"><b>Share History</b></h2>
+  </div>
+  <mat-divider></mat-divider>
+  <div *ngIf="navlistdata.length===0"><h3 style="text-align: center;">No saved One's</h3></div>
+  <div *ngFor="let item of navlistdata">
+    <a mat-list-item href="/share/{{item.linkcode}}" target="_blank"><span>{{item.sno}}. </span> {{item.linkcode.substring(0,18)}}...</a>
+  </div>
+</mat-nav-list>

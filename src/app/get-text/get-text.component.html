@@ -1,0 +1,20 @@
+<!-- <div *ngIf="text">
+  <ckeditor  [editor]="Editor" [data]="text!=null?text:''"  ></ckeditor>
+</div> -->
+<div class="container">
+  <div class="top-nav">
+    <button >Home</button>
+    <button >New Text</button>
+    <div class="profile-image" >
+      <img src="../../assets/images/436460955024201.gif" alt="Anonymous" class="user-image mr-1 p-2" />
+    </div>
+  </div>
+  <div *ngIf="text" class="editorbox">
+    <ckeditor [editor]="Editor" [data]="text || ''"  [disabled]="true"></ckeditor>
+  </div>
+
+
+</div>
+
+
+

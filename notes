@@ -1,0 +1,2 @@
+npm install -g @angular/cli
+to add icons ng add @angular/material then add module.ts MatIconModule

@@ -3,9 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  recaptcha: {
+    siteKey: '6Ld-PhwpAAAAAAgnRus7NGe_m53VE3708QMvkGjY',
+  },
 
+};
+export const API='http://localhost:3000/api';
+export const URL="http://localhost:4200/";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

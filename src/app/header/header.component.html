@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="row mr-2 ml-auto">
+
+          <button
+            mat-button
+            [matMenuTriggerFor]="menu"
+          >
+            <img src="../../assets/images/436460955024201.gif" alt="" class="user-image mr-1 p-2" />
+            <span>{{myname}}</span>
+            <mat-icon
+              >keyboard_arrow_down</mat-icon
+            >
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onLogout()">
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
