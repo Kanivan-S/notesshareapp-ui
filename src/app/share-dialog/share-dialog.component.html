@@ -23,7 +23,7 @@
 <div *ngIf="data.boxtype==='otp'" >
   <form [formGroup]="otpForm">
       <h1>Enter the OTP sent to the mail</h1>
-      <ng-otp-input for  (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+      <ng-otp-input for  (onInputChange)="onOtpChange($event)" [config]="{length:6,isPasswordInput:true}"></ng-otp-input>
   </form>
   <!-- <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5}"></ng-otp-input> -->
 </div>

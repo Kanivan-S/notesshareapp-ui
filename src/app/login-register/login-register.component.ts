@@ -149,6 +149,7 @@ export class LoginRegisterComponent implements OnInit {
           next:(data:HttpResponse<any>)=>{
             this.showSnackbar(data.body.message);
             localStorage.setItem("mail",data.body.mail);
+            this.isDialogOpen=true;
             const dialogRef = this.dialog.open(ShareDialogComponent, {
               disableClose:true,
               data: {
